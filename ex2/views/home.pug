@@ -1,0 +1,25 @@
+doctype html 
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/w3.css')
+    body
+    table.w3-table.w3-striped
+        thead
+        tr
+            th idcontrato
+            th objectoContrato
+            th dataCelebracaoContrato
+            th precoContratual
+            th NIPC_entidade_comunicante
+            th entidade_comunicante
+
+        tbody
+        each contrato in dadosj
+            tr
+                td #[a(href="/"+contrato.id) #{contrato.id} ]
+                td= contrato.objectoContrato
+                td= contrato.dataCelebracaoContrato
+                td= contrato.precoContratual
+                td #[a(href="entidades/"+contrato.NIPC_entidade_comunicante) #{contrato.NIPC_entidade_comunicante}]
+                td= contrato.entidade_comunicante

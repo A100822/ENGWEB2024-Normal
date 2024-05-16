@@ -1,0 +1,35 @@
+doctype html 
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/w3.css')
+    body
+    button(onclick="/") Voltar a página anterior
+    table.w3-table.w3-striped
+        thead
+        tr
+            th idcontrato
+            th nAnuncio
+            th tipoprocedimento
+            th objectoContrato
+            th dataPublicacao
+            th dataCelebracaoContrato
+            th precoContratual
+            th prazoExecucao
+            th NIPC_entidade_comunicante
+            th entidade_comunicante
+            th fundamentacao
+
+        tbody
+        tr
+            td #{dadosj.idcontrato}
+            td #{dadosj.nAnuncio}
+            td #{dadosj.tipoprocedimento}
+            td #{dadosj.objectoContrato}
+            td #{dadosj.dataPublicacao}
+            td #{dadosj.dataCelebracaoContrato}
+            td #{dadosj.precoContratual}
+            td #{dadosj.prazoExecucao}
+            td #{dadosj.NIPC_entidade_comunicante}
+            td #{dadosj.entidade_comunicante}
+            td #{dadosj.fundamentacao}

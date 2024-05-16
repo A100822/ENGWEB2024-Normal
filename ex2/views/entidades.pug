@@ -1,0 +1,31 @@
+doctype html 
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/w3.css')
+    body
+    button(onclick="/") Voltar a página anterior
+    h1 Entidade #{dadosj.NIPC_entidade_comunicante} - #{dadosj.entidade_comunicante}
+    table.w3-table.w3-striped
+        thead
+        tr
+            th idcontrato
+            th objectoContrato
+            th dataCelebracaoContrato
+            th precoContratual
+            th NIPC_entidade_comunicante
+            th entidade_comunicante
+
+        tbody
+        each contrato in dadosj
+            tr
+                td #[a(href="/"+contrato.id) #{contrato.id} ]
+                td #{contrato.objectoContrato}
+                td #{contrato.dataCelebracaoContrato}
+                td #{contrato.precoContratual}
+                td #{contrato.NIPC_entidade_comunicante}
+                td #{contrato.entidade_comunicante}
+    h2 Somatório do valor dos contratos: #{dadosj.somatorio}€
+
+
+    
